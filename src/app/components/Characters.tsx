@@ -1,7 +1,6 @@
 import { Character } from "@/app/interfaces";
-import CharacterItem from "./CharacterItem";
 
-export default async function CharacterList({
+export default async function Characters({
   characterUrls,
 }: {
   characterUrls: string[];
@@ -17,7 +16,10 @@ export default async function CharacterList({
 
       <ul className="list-disc list-inside">
         {characters.map((character: Character) => (
-          <CharacterItem key={character.url} character={character} />
+          <li key={character.url} className="list-disc">
+            {character.name}
+            {character.died ? ` - Died ${character.died}` : " - Alive"}
+          </li>
         ))}
       </ul>
     </section>
