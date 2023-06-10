@@ -1,11 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import Houses from "@/app/components/Houses";
+import HouseList from "@/app/components/HouseList";
 
 export default function Home() {
   return (
-    <main className="max-w-xl mx-auto">
-      <h2 className="mb-6">Hello, Westeros!</h2>
+    <main className="max-w-xl mx-auto px-6 py-8">
+      <h2 className="mb-6">Hello, Planetos!</h2>
 
       <p className="mb-6">
         Welcome to <strong>Valar Morghulis</strong> - a project created with
@@ -14,7 +12,7 @@ export default function Home() {
         display a list of houses with their sworn members.
       </p>
 
-      <Houses />
+      <HouseList />
     </main>
   );
 }

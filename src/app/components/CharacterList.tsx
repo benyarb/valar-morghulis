@@ -13,9 +13,9 @@ export default async function CharacterList({
 
   return (
     <section>
-      <h3>Sworn Members</h3>
+      <h4>Sworn Members</h4>
 
-      <ul>
+      <ul className="list-disc list-inside">
         {characters.map((character: Character) => (
           <CharacterItem key={character.url} character={character} />
         ))}

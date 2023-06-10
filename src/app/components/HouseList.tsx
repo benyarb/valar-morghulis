@@ -1,7 +1,7 @@
 import { House } from "@/app/interfaces";
 import CharacterList from "./CharacterList";
 
-export default async function Houses() {
+export default async function HouseList() {
   const houses = await getHouses();
 
   return (
@@ -11,12 +11,12 @@ export default async function Houses() {
       {houses.map((house: House) => (
         <div
           key={house.url}
-          className="border-b py-4 overflow-hidden border-white shadow-xl"
+          className="border-b py-4 overflow-hidden border-white"
         >
-          <p className="pb-4">
+          <h3>
             <strong>{house.name} </strong>
-            <em className="float-right">{house.words}</em>
-          </p>
+            <em className="float-right text-sm mt-1">{house.words}</em>
+          </h3>
 
           <CharacterList characterUrls={house.swornMembers} />
         </div>
@@ -36,3 +36,5 @@ async function getHouses() {
 
   return houses;
 }
+
+function logHouses() {}

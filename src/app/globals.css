@@ -25,3 +25,58 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+header {
+  background: url("/logo.png") top center no-repeat;
+  background-size: 24rem;
+}
+
+.brand h1 {
+  color: rgba(100, 200, 200, 1);
+  transition: color 400ms ease-in-out;
+}
+
+.brand:hover h1 {
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 0, 0, 1),
+    rgba(255, 0, 180, 1),
+    rgba(0, 100, 200, 1)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+p a {
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+p a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+h2 {
+  @apply text-3xl mb-4;
+}
+
+h3 {
+  @apply text-xl mb-2;
+}
+
+h4 {
+  @apply text-lg mb-2;
+}

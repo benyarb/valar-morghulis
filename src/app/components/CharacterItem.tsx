@@ -6,9 +6,9 @@ export default async function CharacterItem({
   character: Character;
 }) {
   return (
-    <li>
+    <li className="list-disc">
       {character.name}
-      {character.died ? `Died ${character.died}` : "Alive"}
+      {character.died ? ` - Died ${character.died}` : " - Alive"}
     </li>
   );
 }
