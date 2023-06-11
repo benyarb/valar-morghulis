@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import Characters from "@/components/Characters";
 import { House } from "@/types";
 
-export default async function Houses() {
-  const houses = (await getHouses()) as House[];
+export default async function Houses({ page }: { page: number }) {
+  const houses = (await getHouses(page)) as House[];
 
   return (
     <section>
@@ -26,8 +26,10 @@ export default async function Houses() {
   );
 }
 
-async function getHouses() {
-  const res = await fetch("https://www.anapioficeandfire.com/api/houses");
+async function getHouses(page: number) {
+  const res = await fetch(
+    `https://www.anapioficeandfire.com/api/houses?page=${page}`
+  );
 
   if (!res.ok) {
     throw new Error(res.statusText);

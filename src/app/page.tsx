@@ -16,7 +16,7 @@ export default function Home() {
         and display a list of houses with their sworn members.
       </p>
 
-      <Link href="/houses" className="cta">
+      <Link href="/houses/1" className="cta">
         View Houses
       </Link>
     </section>

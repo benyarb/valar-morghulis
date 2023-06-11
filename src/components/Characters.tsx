@@ -17,7 +17,7 @@ export default async function Characters({
       <ul className="list-disc list-inside">
         {characters.map((character) => (
           <li key={character.url} className="list-disc">
-            {character.name}
+            {character.name || "Unknown"}
             {character.died ? ` - Died ${character.died}` : " - Alive"}
           </li>
         ))}
