@@ -1,4 +1,4 @@
-import Houses from "../../components/Houses";
+import Houses from "@/components/Houses";
 
 export default async function HousesPage() {
   return (
