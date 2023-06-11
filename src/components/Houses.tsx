@@ -1,18 +1,16 @@
-import { House } from "@/app/interfaces";
-import Characters from "./Characters";
 import { Suspense } from "react";
+import Characters from "@/components/Characters";
+import { House } from "@/types";
 
 export default async function Houses() {
-  const houses = await getHouses();
+  const houses = (await getHouses()) as House[];
 
   return (
     <section>
-      <h2 className="mb-0 pb-8 border-b border-white">Houses</h2>
-
-      {houses.map((house: House) => (
-        <div
+      {houses.map((house) => (
+        <article
           key={house.url}
-          className="border-b border-white py-8 overflow-hidden"
+          className="border-b border-slate-700 py-8 overflow-hidden"
         >
           <h3>
             <strong>{house.name} </strong>
@@ -22,7 +20,7 @@ export default async function Houses() {
           <Suspense fallback={<em>Loading...</em>}>
             <Characters characterUrls={house.swornMembers} />
           </Suspense>
-        </div>
+        </article>
       ))}
     </section>
   );

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,22 +20,25 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <header className="mt-12 px-12 text-center">
-          <div className="brand max-w-lg mx-auto flex justify-center gap-2 pb-8 pt-48">
+          <Link
+            href="/"
+            className="items-end brand max-w-lg mx-auto flex justify-center gap-2 pb-8 pt-48"
+          >
             <h1 className="text-4xl text-left">Valar Morghulis</h1>
-            <p className="text-sm leading-6 self-end">on</p>
+            <p className="text-sm leading-6">on</p>
 
             <Image
-              className="relative pb-1 dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+              className="relative p-[0.42rem] dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
               src="/next.svg"
               alt="Next.js"
               width={150}
               height={31}
               priority
             />
-          </div>
+          </Link>
         </header>
 
-        {children}
+        <main className="max-w-xl mx-auto px-6 pt-8 pb-24">{children}</main>
 
         <footer className="text-center text-sm">
           <p className="mb-2">

@@ -70,13 +70,36 @@ p a:hover {
 }
 
 h2 {
-  @apply text-3xl mb-4;
+  @apply text-2xl mb-4;
 }
 
 h3 {
-  @apply text-xl mb-2;
+  @apply text-lg mb-2;
 }
 
 h4 {
-  @apply text-lg mb-2;
+  @apply text-base mb-2;
+}
+
+.cta {
+  @apply rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 100%, 0 100%;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 300ms;
+}
+
+.cta:hover {
+  background-size: 0 100%, 100% 100%;
 }

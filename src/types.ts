@@ -1,4 +1,4 @@
-export interface House {
+export type House = {
   url: string;
   name: string;
   region: string;
@@ -15,9 +15,9 @@ export interface House {
   ancestralWeapons: string[];
   cadetBranches: string[];
   swornMembers: string[];
-}
+};
 
-export interface Character {
+export type Character = {
   url: string;
   name: string;
   gender: string;
@@ -34,4 +34,4 @@ export interface Character {
   povBooks: string[];
   tvSeries: string[];
   playedBy: string[];
-}
+};

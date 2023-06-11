@@ -1,4 +1,4 @@
-import { Character } from "@/app/interfaces";
+import { Character } from "../types";
 
 export default async function Characters({
   characterUrls,
