@@ -8,14 +8,14 @@ export default async function Characters({
   if (characterUrls.length === 0)
     return <em>This house has no sworn members</em>;
 
-  const characters = await getCharacters(characterUrls);
+  const characters = (await getCharacters(characterUrls)) as Character[];
 
   return (
     <section>
       <h4>Sworn Members</h4>
 
       <ul className="list-disc list-inside">
-        {characters.map((character: Character) => (
+        {characters.map((character) => (
           <li key={character.url} className="list-disc">
             {character.name}
             {character.died ? ` - Died ${character.died}` : " - Alive"}
