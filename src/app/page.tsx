@@ -16,14 +16,6 @@ export default function Home() {
         and display a list of houses with their sworn members.
       </p>
 
-      <p className="mb-12">
-        This project makes full use of Next JS 13&apos;s new App Router and
-        React Server Components for a fast and smooth user experience. It also
-        uses Tailwind CSS for styling and Cypress for e2e testing. There is both
-        a light mode and a dark mode, which is automatically set based on your
-        system preferences.
-      </p>
-
       <Link href="/houses/1" className="cta">
         View Houses
       </Link>
