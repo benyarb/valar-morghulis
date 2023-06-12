@@ -30,6 +30,20 @@ describe("The First Houses Page", () => {
   it("does not show previous button", () => {
     cy.get("#previous").should("be.hidden");
   });
+
+  // character tests are probably better in a standalone
+  // component test, but i need to wrap this up
+  it("shows empty message if no sworn members", () => {
+    cy.get(".house:first").contains("This house has no sworn members");
+  });
+
+  it("shows sworn members", () => {
+    cy.get(".house:nth-child(2)").contains("Sworn Members");
+    cy.get(".house:nth-child(2) .character").should(
+      "have.length.of.at.least",
+      1
+    );
+  });
 });
 
 describe("The Last Houses Page", () => {
