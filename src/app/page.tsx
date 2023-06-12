@@ -11,7 +11,7 @@ export default function Home() {
         Welcome to <strong>Valar Morghulis</strong> - a project created with
         Next JS to access{" "}
         <a href="https://anapioficeandfire.com/" target="_blank">
-          An API of Ice And Fire
+          An API of Ice and Fire
         </a>{" "}
         and display a list of houses with their sworn members.
       </p>
