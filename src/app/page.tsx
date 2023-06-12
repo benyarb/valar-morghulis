@@ -7,7 +7,7 @@ export default function Home() {
     <section className="text-center">
       <h2 className="mb-6">Hello, Planetos!</h2>
 
-      <p className="mb-6">
+      <p className="mb-12">
         Welcome to <strong>Valar Morghulis</strong> - a project created with
         Next JS to access{" "}
         <a href="https://anapioficeandfire.com/" target="_blank">
