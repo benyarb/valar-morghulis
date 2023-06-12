@@ -14,9 +14,9 @@ export default async function Characters({
     <section>
       <h4>Sworn Members</h4>
 
-      <ul className="list-disc list-inside">
+      <ul className="characters list-disc list-inside">
         {characters.map((character) => (
-          <li key={character.url} className="list-disc">
+          <li key={character.url} className="character list-disc">
             {character.name || "Unknown"}
             {character.died ? ` - Died ${character.died}` : " - Alive"}
           </li>

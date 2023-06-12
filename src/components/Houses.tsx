@@ -6,11 +6,11 @@ export default async function Houses({ page }: { page: number }) {
   const houses = (await getHouses(page)) as House[];
 
   return (
-    <section>
+    <section className="houses">
       {houses.map((house) => (
         <article
           key={house.url}
-          className="border-b border-slate-700 py-8 overflow-hidden"
+          className="house border-b border-slate-700 py-8 overflow-hidden"
         >
           <h3>
             <strong>{house.name} </strong>

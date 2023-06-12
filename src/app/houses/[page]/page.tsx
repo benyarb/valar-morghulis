@@ -23,6 +23,7 @@ export default async function HousesPage({
         <Link
           href={`/houses/${page - 1}`}
           className={`cta ${page === 1 ? "invisible" : ""}`}
+          id="previous"
         >
           Previous
         </Link>
@@ -30,6 +31,7 @@ export default async function HousesPage({
         <Link
           href={`/houses/${page + 1}`}
           className={`cta ${page === 45 ? "invisible" : ""}`}
+          id="next"
         >
           Next
         </Link>
