@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Valar Morghulis",
   description:
-    "A project created with Next JS to access An API of Ice And Fire and display a list of houses with their sworn members.",
+    "A project created with Next JS to access An API of Ice and Fire and display a list of houses with their sworn members.",
 };
 
 export default function RootLayout({
