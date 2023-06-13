@@ -28,6 +28,8 @@ export default async function HousesPage({
           Previous
         </Link>
 
+        <p className="text-sm p-2 self-center">{page} of 45</p>
+
         <Link
           href={`/houses/${page + 1}`}
           className={`cta ${page === 45 ? "invisible" : ""}`}
